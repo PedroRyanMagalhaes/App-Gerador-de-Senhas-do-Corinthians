@@ -25,7 +25,7 @@ export default function  App(){
   return (
     <View style={styles.container}>
       <Image
-      source={require(`@/assets/images/logo.png`)}
+      source={require(`@/assets/images/corinthians.png`)}
       style= {styles.logo}
       />
      <Text style = {styles.toptext}>By Pedro Programador</Text>
@@ -36,9 +36,9 @@ export default function  App(){
       style={{ height: 50}}
       minimumValue={6}
       maximumValue={20}
-      maximumTrackTintColor='red'
-      minimumTrackTintColor='blue'
-      thumbTintColor='blue'
+      maximumTrackTintColor='#FDB913'
+      minimumTrackTintColor='black'
+      thumbTintColor='black'
       value={10}
       onValueChange={(value) => setSize (Number(value.toFixed(0)))}
       />
@@ -47,7 +47,7 @@ export default function  App(){
         <Text style= {styles.buttonText}>Gerar Senha</Text>
       </TouchableOpacity>
 
-      <Modal visible = {modalVisible} animationType='fade'>
+      <Modal visible = {modalVisible} animationType='fade' transparent = {true}>
         <ModalPassword/>
       </Modal>
       
@@ -70,7 +70,9 @@ const styles = StyleSheet.create({
     marginBottom: 28
   },
   logo:{
-    marginBottom: 60
+    marginBottom: 60,
+    resizeMode: 'contain',
+    width: 400,
   },
   area:{
     marginTop: 14,
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     padding: 6,
   },
   button:{
-    backgroundColor: "blue",
+    backgroundColor: "black",
     width: "80%",
     top: 25,
     height: 50,
